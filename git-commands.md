@@ -62,4 +62,14 @@ git add .			--> can use this for add all the untracked files to track and stagin
 git status			--> To check the current status of our changes - like files are untracked or added for staging 
 git rm --cached <file_name>	--> if you like to unstage (untracked) some file which is by mistakenly get staging.
 
-git commit -m "Meaningful message"	--> This make sure that after commit takes everything in your staging area and saves it as a permanent snapshot in your 
+git commit -m "Meaningful message"	--> This make sure that after commit takes everything in your staging area and saves it as a permanent snapshot in your
+
+git log				--> It will display a detailed record of your commit.
+git log --oneline		--> Compact view of your git log
+
+(HEAD -> main): 
+This pointer indicates that your local workspace is currently looking at this exact commit on the main branch.
+
+git diff			--> to check the difference between before changes and after changes.
+
+git restore <file>		--> to discard changes in working directory before git add / staging 
