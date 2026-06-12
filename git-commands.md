@@ -48,3 +48,18 @@ sudo apt get install git		--> To install git on your system (ubuntu)
 
 git config --global user.name  "Your Name"		--> To add git username to use in global
 git config --global user.email "you@example.com"	--> To add git useremail to use in global
+
+git config user.name		--> To check the specific for user.name
+git config user.email		--> To check the specific for user.email
+git config --list		--> To see all global configurations at once
+
+git init		--> To initialize it as git repository - Initialized empty Git repository in /your/path/<local_folder_name>/.git/
+git status		--> To check the git status - It says you are currently on default branch, no commits yet, no history and versions and also check if any new or 			    modified files for tracking.
+
+git add <file_name>		--> To make that file tracked and staging
+git add .			--> can use this for add all the untracked files to track and staging.
+
+git status			--> To check the current status of our changes - like files are untracked or added for staging 
+git rm --cached <file_name>	--> if you like to unstage (untracked) some file which is by mistakenly get staging.
+
+git commit -m "Meaningful message"	--> This make sure that after commit takes everything in your staging area and saves it as a permanent snapshot in your 
