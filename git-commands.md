@@ -72,4 +72,30 @@ This pointer indicates that your local workspace is currently looking at this ex
 
 git diff			--> to check the difference between before changes and after changes.
 
-git restore <file>		--> to discard changes in working directory before git add / staging 
+git restore <file>		--> to discard changes in working directory before git add / staging
+
+++++
+
+GIT Branching
+
+git branch		--> to see all local branches
+git branch -a		--> to see all local and remote branches
+git branch feature-1	--> To create new branch name feature-1
+git switch feature-1	--> To switch to the branch feature-1
+git checkout -b feature-2	--> To create and switch to the new branch name feature-2
+git switch -c <branch-name> | Creates a new branch and switches to it immediately. |
+git checkout -b <branch-name> | The older equivalent to create and switch to a branch. |
+git branch -d <branch-name> | Deletes a branch safely (fails if there are unmerged changes). |
+git branch -D <branch-name> | Force-deletes a branch, discarding any unmerged changes. |
+
+git push -u origin feature-branch-1	--> to push changes to the feature branch
+
+git pull origin feature-branch-1	--> getting updates pull from GitHub repo
+
+git remote add upstream https://github.com/OriginalOwner/original-repo.git	--> Link your local repo to the original project
+git fetch upstream		--> Download all the new commits from the original project without touching your local code yet.
+git switch master		--> Ensure you are on your primary branch (usually main or master).
+git merge upstream/main		--> Combine the original project's updates into your local branch.
+git push origin main		--> Push these newly merged changes back up to your fork on GitHub so your cloud version is also up to date.
+
+++++ 
