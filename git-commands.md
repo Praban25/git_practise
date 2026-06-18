@@ -98,4 +98,35 @@ git switch master		--> Ensure you are on your primary branch (usually main or ma
 git merge upstream/main		--> Combine the original project's updates into your local branch.
 git push origin main		--> Push these newly merged changes back up to your fork on GitHub so your cloud version is also up to date.
 
-++++ 
+++++
+
+**git push origin --delete feature-branch-1	--> after deleting feature branch on local, push same to the GitHub
+git diff		--> To check the conflict when git shows any conflicts 
+
+
+git rebase master		--> it will rebase the commit history. Master commit first and then followed by feature-dashboard commits.
+Head moves to feature branch last commit as observe.
+
+git merge --squash feature-profile	--> use to squash commits into one commit in main branch
+
+git stash		--> to save your unfinished work in current branch
+git stash save "comments"		--> to save your stash with certain comments to recognize later
+git stash pop		--> to get your unfinished work back
+git stash list		--> to check the stash lists
+git stash apply stash@{2}	--> to apply specific stash from the list
+git stash clear		--> to empty your stashes from the git memory 
+
+git cherry-pick <commit_id_from_feature_branch>	--> It will add that specific commit from the feature branch to the main branch
+git cherry-pick -x <commit-ID>		--> This automatically appends a line to the commit message saying (cherry picked from commit ...)
+
+
+git reset --soft HEAD~1		--> It will reset to the one step previous commit(HEAD~1) and HEAD file kept on system with staging area
+git reset --mixed HEAD~1	--> It will reset to the one step previous commit(HEAD~1) and HEAD file kept on system with untracked area
+git reset --hard HEAD~1		--> It will reset to the one step previous commit(HEAD~1) and clean the file too from the system
+
+git revert <commit_hash> 		--> to revert the changes in any file. It will preserve the last commit history and create new commit for the same.
+
+
+git reflog			--> It is a local diary that records every single place your HEAD has pointed in your local repository. Even if you commit something, delete the branch, or perform a disastrous hard reset, git reflog remembers it. It is your go-to tool for recovering seemingly "lost" work.
+
+***************************************************************************** 
